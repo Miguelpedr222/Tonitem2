@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toni Tem Eletricidade</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsivo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+  <img src="img/assets/logo.png" alt="Logo" class="logo" />
+  <nav>
+    <a href="index.html">INÍCIO</a>
+    <a href="index.html#sobre">SOBRE NÓS</a>
+    <a href="index.html#catalogo">CATÁLOGO</a>
+    <a href="contato.html">CONTATO</a>
+  </nav>
+</header>
+
+<div class="navbar-responsivo">
+  <img src="img/assets/logo.png" alt="Logo" />
+  <button class="resp menu-toggle" onclick="burgerbtn()">
+  <img src="img/assets/menu-100.png" alt="Abrir menu" />
+</button>
+</div>
+
+<div id="menu">
+  <a href="index.html">INÍCIO</a>
+  <a href="index.html#sobre">SOBRE NÓS</a>
+  <a href="index.html#catalogo">CATÁLOGO</a>
+  <a href="contato.html">CONTATO</a>
+</div>
+
+  <section class="faixada">
+    <img src="img/assets/faixada.jpg" alt="faixada" />
+  </section>
+
+  <section class="sobre" id="sobre">
+  <div class="sobre-container">
+    <div class="sobre-imagem">
+      <img src="img/assets/tonitem.jpg" alt="tonitem">
+    </div>
+    <div class="sobre-texto">
+      <div class="coluna"><h2>SOBRE NÓS</h2>
+      </br><p>De ferramentas a componentes elétricos, a Toni
+          Tem é a parceira ideal para profissionais e quem
+          gosta de colocar a mão na massa.
+          Na Toni Tem, acreditamos que bons projetos
+          começam com as ferramentas e peças certas —
+          e com um atendimento de confiança.</p></div>
+      <div class="coluna sobre-texto1"><p>Estamos há
+        10 anos no mercado oferecendo qualidade,
+        variedade e conhecimento técnico em tudo que
+        vendemos. De ferramentas manuais a componentes
+        elétricos, nossa missão é ser o parceiro ideal
+        de quem faz, instala, conserta e transforma.
+        Atendemos desde profissionais da área até clientes
+        que gostam de colocar a mão na massa.</p></div>
+    </div>
+  </div>
+</section>
+
+  <section class="catalogo" id="catalogo">
+    <h2>CATÁLOGO</h2>
+    <form onsubmit="filtrarProdutos(event)" class="filtro-form">
+      <input type="text" id="pesquisa" placeholder="Buscar produto..." />
+      <select id="categoria">
+        <option value="">Todas as categorias</option>
+        <option value="iluminacao">Iluminação</option>
+        <option value="chuveiros">Chuveiros</option>
+        <option value="disjuntores">Disjuntores</option>
+        <option value="ventiladores">Ventiladores</option>
+        <option value="fiacao">Fiação</option>
+        <option value="outros">Outros</option>
+      </select>
+      <button type="submit">BUSCAR</button>
+    </form>
+
+    <div class="produtos">
+      <div class="produto" data-categoria="ventiladores">
+        <img src="img/produtos/png/ventilador_ventex_teto.png" alt="Ventilador Ventex" />
+        <h3>Ventilador de Teto - Ventex</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="iluminacao">
+        <img src="img/produtos/png/luminaria_plafon_sobrepor.png" alt="luminaria sobrepor" />
+        <h3>Luminária Plafon de Sobrepor</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="chuveiros">
+        <img src="img/produtos/png/chuveiro_lorenzetti_comum.png" alt="chuveiro comum lorenzetti" />
+        <h3>Chuveiro Comum - Lorenzetti</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="outros">
+        <img src="img/produtos/png/banqueta.png" alt="Banqueta" />
+        <h3>Banqueta</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="disjuntores">
+        <img src="img/produtos/png/disjuntor_DPS.png" alt="disjuntor dps" />
+        <h3>Disjuntor DPS</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="fiacao">
+        <img src="img/produtos/png/cabo_rede.png" alt="cabo de rede" />
+        <h3>Cabo de Rede</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+        <div class="produto" data-categoria="outros">
+        <img src="img/produtos/png/contator margirius tripolar.png" alt="contator tripolar" />
+        <h3>Contator Tripolar</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+        <div class="produto" data-categoria="chuveiros">
+          <img src="img/produtos/png/chuveiro_advanced_turbo_multi.png" alt="chuveiro" />
+          <h3>Chuveiro - Turbo Multi</h3>
+          <div class="compartilhar">
+            <a href="https://wa.me/?text=Confira este produto" target="_blank">
+              <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="img/assets/facebook-64.png" alt="Facebook" />
+            </a>
+            <button class="copiar-link" onclick="copiarLink(event, this)">
+              <img src="img/assets/link-64.png" alt="Copiar Link" />
+            </button>
+          </div>
+        </div>
+        <div class="produto" data-categoria="iluminacao">
+          <img src="img/produtos/png/luminaria_led_bolbo_bivolt.png" alt="lampada led" />
+          <h3>Lâmpada de LED</h3>
+          <div class="compartilhar">
+            <a href="https://wa.me/?text=Confira este produto" target="_blank">
+              <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="img/assets/facebook-64.png" alt="Facebook" />
+            </a>
+            <button class="copiar-link" onclick="copiarLink(event, this)">
+              <img src="img/assets/link-64.png" alt="Copiar Link" />
+            </button>
+          </div>
+        </div>
+        <div class="produto" data-categoria="ventiladores">
+          <img src="img/produtos/png/ventilador_octopus_pe.png" alt="Ventilador pé octupos" />
+          <h3>Ventilador em Pé - Octupos</h3>
+          <div class="compartilhar">
+            <a href="https://wa.me/?text=Confira este produto" target="_blank">
+              <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="img/assets/facebook-64.png" alt="Facebook" />
+            </a>
+            <button class="copiar-link" onclick="copiarLink(event, this)">
+              <img src="img/assets/link-64.png" alt="Copiar Link" />
+            </button>
+          </div>
+        </div>
+        <div class="produto" data-categoria="fiacao">
+        <img src="img/produtos/png/fio_cristal.png" alt="fio cristal" />
+        <h3>Fio Cristal</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+        <div class="produto" data-categoria="ventiladores">
+        <img src="img/produtos/png/ventilador_tron_parede.png" alt="Ventilador parede tron" />
+        <h3>Ventilador de Parede - Tron</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="disjuntores">
+        <img src="img/produtos/png/disjuntor_bipolar.png" alt="disjuntor bi" />
+        <h3>Disjuntor Bipolar</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="chuveiros">
+        <img src="img/produtos/png/chuveiro_maxi_ultra.png" alt="chuveiro maxi" />
+        <h3>Chuveiro Comum - Maxi</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="iluminacao">
+        <img src="img/produtos/png/luminaria_plafon_embutir.png" alt="luminaria embutir" />
+        <h3>Luminária Plafon de Embutir</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="outros">
+        <img src="img/produtos/png/terminal_olhal.png" alt="terminal" />
+        <h3>Terminal Olhal</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+      <div class="produto" data-categoria="ventiladores">
+        <img src="img/produtos/png/ventilador_octopusparede.png" alt="Ventilador parede octupos" />
+        <h3>Ventilador de Parede - Octupos</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="iluminacao">
+        <img src="img/produtos/png/luminaria_slim.png" alt="luminaria slim" />
+        <h3>Luminária Slim</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="outros">
+        <img src="img/produtos/png/rele_termico.png" alt="relé térmico" />
+        <h3>Relé Térmico</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+      <div class="produto" data-categoria="disjuntores">
+        <img src="img/produtos/png/disjuntor_tomada.png" alt="disjuntor tomada" />
+        <h3>Disjuntor Tomada</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="ventiladores">
+        <img src="img/produtos/png/ventilador_tron_teto_cobre.png" alt="Ventilador solano" />
+        <h3>Ventilador de Teto Cobre Solano - Tron</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="ventiladores">
+        <img src="img/produtos/png/ventilador_tron_teto.png" alt="Ventilador teto tron" />
+        <h3>Ventilador de Teto Aventador - Tron</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="ventiladores">
+        <img src="img/produtos/png/ventilador_ventex_parede.png" alt="Ventilador Parede Ventex" />
+        <h3>Ventilador de Parede - Ventex</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+      </div>
+      <div class="produto" data-categoria="outros">
+        <img src="img/produtos/png/terminal_garfo.png" alt="terminal garfo" />
+        <h3>Terminal Garfo</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+      <div class="produto" data-categoria="disjuntores">
+        <img src="img/produtos/png/disjuntor_DR.png" alt="disjuntor dr" />
+        <h3>Disjuntor DR</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+        <div class="produto" data-categoria="iluminacao">
+        <img src="img/produtos/png/luminaria_comum.png" alt="lampada comum" />
+        <h3>Lâmpada Comum</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+        <div class="produto" data-categoria="fiacao">
+        <img src="img/produtos/png/fio_flexivel.png" alt="fio flexivel" />
+        <h3>Fio Flexível</h3>
+        <div class="compartilhar">
+          <a href="https://wa.me/?text=Confira este produto" target="_blank">
+            <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+          </a>
+          <a href="https://facebook.com" target="_blank">
+            <img src="img/assets/facebook-64.png" alt="Facebook" />
+          </a>
+          <button class="copiar-link" onclick="copiarLink(event, this)">
+            <img src="img/assets/link-64.png" alt="Copiar Link" />
+          </button>
+        </div>
+        </div>
+        <div class="produto" data-categoria="chuveiros">
+          <img src="img/produtos/png/chuveiro_lorenzetti_advanced.png" alt="chuveiro lorenzetti advanced" />
+          <h3>Chuveiro advanced - Lorenzetti</h3>
+          <div class="compartilhar">
+            <a href="https://wa.me/?text=Confira este produto" target="_blank">
+              <img src="img/assets/whatsapp-64.png" alt="WhatsApp" />
+            </a>
+            <a href="https://facebook.com" target="_blank">
+              <img src="img/assets/facebook-64.png" alt="Facebook"/>
+            </a>
+            <button class="copiar-link" onclick="copiarLink(event, this)">
+              <img src="img/assets/link-64.png" alt="Copiar Link"/>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="marcas">
+    <img src="img/assets/marcas.jpg" alt="marcas">
+  </section>
+  <section class="entregas" id="entregas">
+    <div class="entregas-container">
+      <h2>Entregas</h2>
+      <p>
+        Fazemos entregas para todo o Brasil</br>
+        Resolvendo seus problemas sem você sair de casa.
+      </p>
+      <ul>
+        <li>      Via transportadora parceira</li>
+        <li>      Prazo estimado de 5 a 10 dias úteis</li>
+        <li>      Rastreamento disponível após envio</li>
+      </ul>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-links">
+      <div>
+        <strong>Toni Tem Eletricidade Ltda.</strong><br />
+        10901762000112<br />
+        Av. Prof. Henrique da M. F. Jr., 1214 - Vila Daniel<br/>
+        Porto Ferreira – SP | 13660-136
+      </div>
+      <div>
+        <strong>Contato</strong><br />
+        (19) 3585-4673<br />
+        <a href="mailto:financeiro@tonitem.com.br">financeiro@tonitem.com.br</a>
+      </div>
+      <div>
+        <strong>Mapa do Site</strong><br/>
+        <a href="index.html#sobre">Sobre Nós</a><br/>
+        <a href="index.html#catalogo">Catálogo</a><br/>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="redes-sociais">
+        <strong>Nos siga nas redes sociais!</strong><br/>
+        <a href="https://facebook.com" target="_blank">
+          <img src="img/assets/facebook-64.png" alt="facebook" style="width:24px;height:24px;">
+        </a>
+        <a href="https://instagram.com" target="_blank">
+          <img src="img/assets/instagram.png" alt="instagram" style="width:24px;height:24px;">
+        </a>
+        <a href="https://youtube.com" target="_blank">
+          <img src="img/assets/youtube.png" alt="youtube" style="width:24px;height:24px;">
+        </a>
+      </div>
+    </div>
+    <div class="copyright">
+      © 2025 Toni Tem Eletricidade Ltda. – Todos os direitos reservados.<br />
+      Desenvolvido pelos alunos da FATEC 1ºSemestre
+    </div>
+  </footer>
+
+  <div class="whatsapp-flutuante-wrapper">
+    <a class="whatsapp-flutuante" href="https://wa.me/551935854673" target="_blank">
+      <img src="img/assets/whatsapp-480.png" alt="Fale conosco no WhatsApp">
+    </a>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="menuburguer.js" defer></script>
+  <script src="catalogo.js" defer></script>
+  <script>
+  function copiarLink(event, el) {
+    event.preventDefault();
+
+    const produto = el.closest(".produto");
+    const nome = produto.querySelector("h3").innerText.replace(/\s+/g, "-").toLowerCase();
+    const link = window.location.href.split("#")[0] + "#" + nome;
+
+    navigator.clipboard.writeText(link).then(() => {
+      el.innerHTML = "✅";
+      setTimeout(() => {
+        el.innerHTML = '<img src="img/assets/link.png" alt="Copiar Link" />';
+      }, 1500);
+    });
+  }
+</script>
+</body>
+</html>
+</body>
+</html>
