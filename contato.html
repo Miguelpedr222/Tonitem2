@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="header">
+  <img src="img/assets/logo.png" alt="Logo" class="logo" />
+  <nav>
+    <a href="index.html">INÍCIO</a>
+    <a href="index.html#sobre">SOBRE NÓS</a>
+    <a href="index.html#catalogo">CATÁLOGO</a>
+    <a href="contato.html">CONTATO</a>
+  </nav>
+</header>
+
+<div class="navbar-responsivo">
+  <img src="img/assets/logo.png" alt="Logo" />
+  <button class="resp menu-toggle" onclick="burgerbtn()">
+  <img src="img/assets/menu-100.png" alt="Abrir menu" />
+</button>
+</div>
+
+<div id="menu">
+  <a href="index.html">INÍCIO</a>
+  <a href="index.html#sobre">SOBRE NÓS</a>
+  <a href="index.html#catalogo">CATÁLOGO</a>
+  <a href="contato.html">CONTATO</a>
+</div>
+
+  <main>
+    <section class="contato">
+      <h2>Fale Conosco</h2>
+      <form action="https://formsubmit.co/seu@email.com" method="POST">
+        <input type="hidden" name="_next" value="https://seusite.com/sucesso.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="name" placeholder="Seu nome" required>
+        <input type="email" name="email" placeholder="Seu e-mail" required>
+        <textarea name="message" placeholder="Digite sua mensagem..." rows="5" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main> 
+</body>
+</html>
