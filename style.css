@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+.navbar-responsivo,
+#menu {
+  display: none;
+}
+.header {
+  background-color: #06578f;
+  background-image: linear-gradient(rgba(255, 0, 0, 0), #04568e);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 35px 4px 15px;
+}
+
+.header .logo {
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+}
+
+.header nav a {
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.4s;
+}
+
+.header nav a:hover {
+  border-radius: 4px;
+  color: #f7931e;
+  color: white;
+}
+
+.faixada img {
+  width: 100%;
+  height: 570px;
+  object-fit: cover;
+  display: flex;
+
+}
+
+.sobre {
+  background: white;
+  padding: 30px;
+}
+
+.sobre-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+}
+
+.sobre-texto {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.sobre-texto .coluna {
+  flex: 1 1 45%;
+  padding: 20px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: justify;
+  min-height: 100%;
+}
+
+.sobre-texto .coluna h2{
+  font-size: 2rem;
+}
+
+.sobre-texto .coluna p{
+  font-size: 1.15rem;
+}
+
+.catalogo {
+  padding: 40px 80px;
+  background: #04568e;
+  width: 100%;
+}
+
+.catalogo h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bolder;
+}
+
+.filtro-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 30px auto;
+  max-width: 800px;
+  font-family: 'Montserrat';
+}
+
+.filtro-form input,
+.filtro-form select {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  flex: 1 1 200px;
+  font-family: 'Montserrat';
+}
+
+.filtro-form button {
+  background-color: #007bff;
+  color: #fff;
+  font-size: 17px;
+  font-family: 'Montserrat';
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.filtro-form button:hover {
+  background-color: #0056b3;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.produto{
+  background-color: #ffffff79;
+  width: 250px;
+  height: auto;
+  padding: 15px;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.produto img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.produto h3 {
+  color: #000;
+  font-size: 16px;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.compartilhar {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.compartilhar a,
+.compartilhar button {
+  background-color: #ffffff5b;
+  width: auto;
+  height: auto;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.compartilhar a:hover,
+.compartilhar button:hover {
+  transform: scale(1.1);
+  background-color: #e0e0e0;
+}
+
+.compartilhar img {
+  width: 24px;
+  height: 24px;
+}
+
+.copiar-link {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.marcas{
+  background-color: #fff;
+}
+.marcas img{
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+  display: flex;
+}
+
+.entregas {
+  background: #06578f;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.entregas-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.entregas h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.entregas p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.entregas ul {
+  list-style: none;
+  padding: 0;
+}
+
+.entregas li {
+  font-size: 16px;
+  margin: 8px 0;
+  position: relative;
+}
+
+.entregas li::before {
+  content: "✔";
+  left: 0;
+  top: 0;
+}
+
+.footer {
+  background-color: #f7931e;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.footer .footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.footer .footer-links > div {
+  min-width: 180px;
+}
+
+.footer .copyright {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.whatsapp-flutuante-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+.whatsapp-flutuante img {
+  width: 60px;
+  height: 60px;
+  transition: opacity 0.3s ease;
+}
+
+.contato {
+  max-width: 600px;
+  margin: 25px auto;
+  padding: 40px;
+  border-radius: 12px;
+  font-family: 'Montserrat';
+}
+
+.contato h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: 'Montserrat';
+}
+
+.contato input,
+.contato textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Montserrat';
+}
+
+.contato button {
+  padding: 12px;
+  background-color: #06578f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contato button:hover {
+  background-color: #1e79b9;
+}
+
+body:has(footer:hover) .whatsapp-flutuante-wrapper {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fade {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
